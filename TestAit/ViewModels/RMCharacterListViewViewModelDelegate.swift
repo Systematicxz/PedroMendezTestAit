@@ -1,10 +1,11 @@
 //
-//  RMCharacterListViewViewModel.swift
+//  RMCharacterListViewViewModelDelegate.swift
 //  TestAit
 //
-//  Created by PEDRO MENDEZ on 14/07/25.
+//  Created by PEDRO MENDEZ on 31/08/25.
 //
 
+import Foundation
 
 import UIKit
 

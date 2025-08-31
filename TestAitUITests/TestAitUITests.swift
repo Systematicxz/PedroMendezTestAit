@@ -21,7 +21,6 @@ final class TestAitUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
     @MainActor
     func testExample() throws {
         // UI tests must launch the application that they test.

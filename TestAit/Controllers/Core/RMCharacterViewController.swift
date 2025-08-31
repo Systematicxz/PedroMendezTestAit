@@ -1,9 +1,8 @@
-
 //
-//  Untitled.swift
+//  RMCharacterViewController.swift
 //  TestAit
 //
-//  Created by PEDRO MENDEZ on 14/07/25.
+//  Created by PEDRO MENDEZ on 28/08/25.
 //
 
 import UIKit
@@ -22,15 +21,15 @@ final class RMCharacterViewController: UIViewController, RMCharacterListViewDele
     }
     
     private func addSearchButton() {
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
-//                                                            target: self, action: #selector(didTapSearch))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                            target: self, action: #selector(didTapSearch))
     }
-//    @objc
-//    private func didTapSearch() {
-//        let vc = RMSearchViewController(config: RMSearchViewController.Config(type: .character))
-//        vc.navigationItem.largeTitleDisplayMode = .never
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    @objc
+    private func didTapSearch() {
+        let vc = RMSearchViewController(config: RMSearchViewController.Config(type: .character))
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     private  func setUpView() {
         characterListView.delegate = self
@@ -46,10 +45,10 @@ final class RMCharacterViewController: UIViewController, RMCharacterListViewDele
     
     func rmCharacterListView(_ characterListView: RMCharacterListView, didSelectCharacter character: RMCharacter) {
         // Open detal controller for the character
-//        let viewModel = RMCharacterDetailViewViewModel(character: character)
-//        let detailVC = RMCharacterDetailViewController(viewModel: viewModel)
-//        detailVC.navigationItem.largeTitleDisplayMode = .never
-//        navigationController?.pushViewController(detailVC, animated: true)
+        let viewModel = RMCharacterDetailViewViewModel(character: character)
+        let detailVC = RMCharacterDetailViewController(viewModel: viewModel)
+        detailVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(detailVC, animated: true)
         
     }
 }
